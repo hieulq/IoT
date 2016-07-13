@@ -42,7 +42,7 @@ OpenHab sử dụng cấu hình văn bản cho giao diện và đó chính là s
 
 ##3.Giao diện, một số file và thư mục để config Open
 ![alt text][UI]
-[UI]: https://raw.githubusercontent.com/ngocluanbka/IoT/master/IR.png "Giao diện OpenHab"
+[UI]: https://raw.githubusercontent.com/ngocluanbka/IoT/master/ui.png "Giao diện OpenHab"
 
 Trong giao diện này thể hiện 1 phòng khách với 2 thiết bị: nhiệt kế và đèn. 
 
