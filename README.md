@@ -70,7 +70,8 @@ Thư mục sẽ chưa những khai báo về các thiết bị, định nghĩa c
 ###3.5 Thư mục configuration/script
 các script trong thư mục này giúp định nghĩa các luật theo ý của người dùng. Ví dụ bạn muốn đặt 1 luật là, nếu nhiệt độ lớn hơn 30 độ thì bật điều hòa, thì sẽ viết trong thư mục này.
 
-```if (nhiệt độ >30 )
+```
+if (nhiệt độ >30 )
 {
 	sendCommand(ON, điều hòa).
 }
