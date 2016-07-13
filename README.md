@@ -10,7 +10,7 @@ Diễn giải theo quan điểm cá nhân: OpenHab như một phần mềm quả
 ##2.Cấu trúc của OpenHab
 
 ![alt text][architecture]
-[architecture]: https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "OpenHab Architecture"
+[architecture]: https://raw.githubusercontent.com/ngocluanbka/IoT/master/architecture.png "OpenHab Architecture"
 
 OpenHab Runtime được deploy trên OSGi Framework (framework này vận hành theo cơ chế pub/sub), nó sử dụng nền tảng Java solution và cần JVM để chạy. Hiện tại thì OpenHab đang hỗ trợ đến phiên bản JDK8, còn JDK9 thì lỗi không hiểu tại sao. :)) 
 Dựa trên OSGi, OpenHab tích hợp các kiến trúc mô-đun hóa, và tích hợp rất nhiều thành phần vào nhau (như hình trên).
@@ -34,15 +34,15 @@ IR là thành phần kết nối tới Event Bus và luôn giữ trạng thái c
 IR được sử dụng trong nhiều hoàn  cảnh, điển hình nhất là cập nhật trạng thái của các items trên giao diện.
 
 ![alt text][IR]
-[IR]: https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "OpenHab Architecture"
+[IR]: https://raw.githubusercontent.com/ngocluanbka/IoT/master/IR.png "Item Repository"
 
 
 ####Sitemap
 OpenHab sử dụng cấu hình văn bản cho giao diện và đó chính là sitemap, sitemap là một cây cấu trúc gồm các widget, các widget này định nghĩa UI và nội dung của nó. Widget có thể là các item, hoặc các controller, status…. Blabla.
 
 ##3.Giao diện, một số file và thư mục để config Open
-![alt text][IR]
-[IR]: https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "OpenHab Architecture"
+![alt text][UI]
+[UI]: https://raw.githubusercontent.com/ngocluanbka/IoT/master/IR.png "Giao diện OpenHab"
 
 Trong giao diện này thể hiện 1 phòng khách với 2 thiết bị: nhiệt kế và đèn. 
 
