@@ -1,4 +1,4 @@
-FROM java:8-jdk-alpine
+FROM java:openjdk-8-alpine
 MAINTAINER ngocluanbka
 RUN apk update && apk upgrade && \
     apk add --no-cache bash git
