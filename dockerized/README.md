@@ -13,7 +13,7 @@ go to /InfluxDB_Cron
 sudo service mosquitto start
 
 ###Start OpenHab Container
-`docker run 
+`docker run <br />
 -p 8080:8080 
 -p 8443:8443 
 -v $LINK/addons:/openhab/addons 
