@@ -35,7 +35,9 @@ ngocluanbka/openhab:1.8
 ```
 
 ###Start InfluxDB Cron (get data from openhab and send to InfluxDB)
-
+```
+python influx_service.py
+```
 
 ###Start InfluxDB Container
 ```
