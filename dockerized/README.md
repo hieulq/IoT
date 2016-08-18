@@ -4,7 +4,7 @@
 
 ###Build image for InfluxDB Cron
 go to /InfluxDB_Cron
-docker build -t ngocluanbka/influxcron:1.0 .
+`docker build -t ngocluanbka/influxcron:1.0 .`
 
 
 #Run Up System
@@ -22,16 +22,16 @@ ngocluanbka/openhab:1.8
 `
 
 ###Start emulator
-./start_sensor.sh
+`./start_sensor.sh`
 
 ###Start InfluxDB Cron (get data from openhab and send to InfluxDB)
 
 
 ###Start InfluxDB Container
-docker run -d -p 8083:8083 -p 8086:8086 -e ADMIN_USER="root" -e INFLUXDB_INIT_PWD="root" -e PRE_CREATE_DB="openhab" --name influxsrv tutum/influxdb:latest
+`docker run -d -p 8083:8083 -p 8086:8086 -e ADMIN_USER="root" -e INFLUXDB_INIT_PWD="root" -e PRE_CREATE_DB="openhab" --name influxsrv tutum/influxdb:latest`
 
 ###Start Grafana
-docker run -d -p 3000:3000 \
+`docker run -d -p 3000:3000 \
 -e HTTP_USER=admin \
 -e HTTP_PASS=admin \
 -e INFLUXDB_HOST=localhost \
@@ -41,4 +41,4 @@ docker run -d -p 3000:3000 \
 -e INFLUXDB_PASS=root \
 --link=influxsrv:influxsrv  \
 grafana/grafana:2.0.2
-
+`
