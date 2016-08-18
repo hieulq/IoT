@@ -1,0 +1,6 @@
+Group All
+Group Living "Living Room" <sofa> (All)
+
+//Living room
+Number Temperature100 "Temperature [%.1f C]" <temperature> (Living) {mqtt="<[mymosquitto:/Living/Temperature:state:default]"}
+Switch Light100 "Light" (Living) { mqtt="<[mymosquitto:/Living/Light/Status:state:default],>[mymosquitto:/Living/Light/Command:command:ON:1],>[mymosquitto:/Living/Light/Command:command:OFF:0]" }

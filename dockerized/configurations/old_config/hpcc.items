@@ -1,0 +1,15 @@
+Group All
+
+Switch 	Light				"Ceiling" 					{ mqtt="<[mymosquitto:/Hpcc/Light/Status:state:default]" }
+
+Switch	Fan 				"Fan" 		<network>			{ mqtt="<[mymosquitto:/Hpcc/Fan/Status:state:default]" }
+
+Contact Door				"Frontdoor [MAP(en.map):%s]" { mqtt="<[mymosquitto:/Hpcc/Door/Status:state:default]" }
+
+Contact Window 				"Windowdoor [MAP(en.map):%s]" { mqtt="<[mymosquitto:/Hpcc/Window/Status:state:default]" }
+
+Number 	Temperature 		"Temperature [%.1f C]"		<temperature> {mqtt="<[mymosquitto:/Hpcc/Temperature:state:default]"}
+
+Number	Humidity			"Outside Humidity [%.1f %%]" <temperature> {mqtt="<[mymosquitto:/Hpcc/Humidity:state:default]"}
+
+DateTime		Date			"Date [%1$tA, %1$td.%1$tm.%1$tY]"	<calendar>	{ ntp="Europe/Berlin:de_DE" }

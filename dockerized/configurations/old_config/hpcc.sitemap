@@ -1,0 +1,13 @@
+sitemap default label="HPCC Center"
+{
+	Frame label="Working Room"
+	{
+		Switch item=Light
+		Switch item=Fan
+		Text item=Door
+		Text item=Window
+		Text item=Temperature
+		Text item=Humidity
+		Text item=Date
+	}
+}
