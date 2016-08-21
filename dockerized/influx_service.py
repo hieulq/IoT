@@ -2,6 +2,19 @@ from influxdb import InfluxDBClient
 import requests
 import xml.etree.ElementTree as ET
 import time
+
+
+def get_config():
+	f_config = open('config/myconfig.cfg','r')
+	line = f_config.readline()
+	items=[]
+	while  line!='':
+		kind,name,numbers = line.split()
+		for i in range(0,int(numbers)):
+			items.append(name+str(i))
+		line=f_config.readline()
+	return items
+
 def init():
 	host='localhost'
 	port=8086
@@ -11,7 +24,7 @@ def init():
 	dbuser=''
 	dbuser_password=''
 	client = InfluxDBClient(host,port,user,password,dbname)
-	items=['Light','Fan','Door','Window','Temperature','Humidity']
+	items=get_config()
 	return client,items
 
 
@@ -42,6 +55,9 @@ def send_data_to_influx(itemsname):
 	json_body = [
 	    {
 	        "measurement": name,
+	        "tags":{
+	        	"serverid": 1
+	        },
 	        "fields": {
 	            "status": state
 	        }
