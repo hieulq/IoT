@@ -6,9 +6,9 @@
 ```
 docker-compose up
 ```
-###Provice permission for kuberctl
+###Provice permission for kubectl
 ```
-sudo chmod +x kuberctl
+sudo chmod +x kubectl
 ```
 
 ###Testing system
