@@ -6,7 +6,7 @@
 ```
 docker-compose up
 ```
-###Provice permission for kubectl
+###Provide permission for kubectl
 ```
 sudo chmod +x kubectl
 ```
