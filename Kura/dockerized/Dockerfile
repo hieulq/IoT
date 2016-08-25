@@ -10,7 +10,7 @@ MAINTAINER ngocluanbka
 RUN echo "deb http://ftp.de.debian.org/debian jessie-backports main" >> /etc/apt/sources.list
 
 ## Cai dat cac goi phan mem can thiet
-RUN apt-get update --fix-missing `&& \
+RUN apt-get update --fix-missing && \
     apt-get install -y apt-utils unzip ethtool dos2unix telnet bind9 hostapd isc-dhcp-server iw monit wget openjdk-8-jdk  wireless-tools && \
     rm -rf /var/lib/apt/lists/*
 
