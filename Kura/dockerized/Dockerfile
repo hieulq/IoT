@@ -28,4 +28,4 @@ EXPOSE 5002
 ## Bind cong 1450 để kết nối iagent
 EXPOSE 1450
 
-CMD ["/bin/bash"]
+CMD ["/opt/eclipse/kura/bin/start_kura.sh"]
