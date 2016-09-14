@@ -7,9 +7,10 @@ services:
       - ./config:/home/config
   openhab:
     image: ngocluanbka/openhab
-    # ports:
-    #   - "8080:8080"
-    #   - "8443:8443"
+    ports:
+      - "8080:8080"
+      - "8443:8443"
     volumes:
       - ./addons:/openhab/addons
       - ./configurations:/openhab/configurations
+  

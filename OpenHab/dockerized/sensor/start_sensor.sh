@@ -162,13 +162,13 @@ while true; do
 	for (( i=0; i < $nums_tempe; i++ )); do
 		echo "send $i time"
 		generate_temperature $i $range_tempe
- 		mosquitto_pub -t /Hpcc/Temperature$i -m ${tempe[$i]}
+ 		mosquitto_pub -h mosquitto_sub -t /Hpcc/Temperature$i -m ${tempe[$i]}
 	done
 
 	for (( i=0; i < $nums_tempe; i++ )); do
 		echo "send $i time"
 		generate_humidity $i $range_humidity
- 		mosquitto_pub -t /Hpcc/Humidity$i -m ${humidity[$i]}
+ 		mosquitto_pub -h mosquitto_sub -t /Hpcc/Humidity$i -m ${humidity[$i]}
 	done
 
 	echo "sended"

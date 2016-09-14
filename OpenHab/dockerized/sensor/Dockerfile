@@ -9,8 +9,10 @@ WORKDIR /home
 COPY ["./config","/home/config"]
 COPY ["./start_sensor.sh","/home"]
 
+ENV timer=1
+
 VOLUME ["/home/config"]
 
 EXPOSE 1883 9001
 
-CMD service mosquitto start && ./start_sensor.sh 5
+CMD service mosquitto start && ./start_sensor.sh $timer
