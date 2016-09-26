@@ -6,6 +6,27 @@
 ```
 docker-compose up
 ```
+
+###Download kubelet(v1.3.6)
+```
+wget https://storage.googleapis.com/kubernetes-release/release/v1.3.6/bin/linux/amd64/kubelet
+```
+
+###Copy kubelet into $HOME_PATH
+```
+sudo cp kubelet /usr/local/sbin
+```
+
+###Run kubelet
+```
+sudo kubelet --api-servers=http://127.0.0.1:8080  --address=0.0.0.0 --enable-debugging-handlers=true --config=/etc/kubernetes/manifests --allow-privileged=False --v=2 --cluster-domain=cluster.local
+```
+
+#Download kubectl(v1.3.6)
+```
+curl -Lo kubectl http://storage.googleapis.com/kubernetes-release/release/v1.3.6/bin/linux/amd64/kubectl
+```
+
 ###Provide permission for kubectl
 ```
 sudo chmod +x kubectl
