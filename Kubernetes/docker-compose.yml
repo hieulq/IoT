@@ -20,6 +20,13 @@ scheduler:
   net: host
   command: ["/usr/local/bin/kube-scheduler", "--master=127.0.0.1:8080", "--v=2"]
 
+kubelet:  
+  image: geku/hyperkube:v1.0.1
+  net: host
+  command: ['/hyperkube', 'kubelet', '--api_servers=http://127.0.0.1:8080', '--v=2', '--address=0.0.0.0', '--enable_server']
+  volumes:
+    - /var/run/docker.sock:/var/run/docker.sock
+
 proxy:  
   image: gcr.io/google-containers/kube-proxy-amd64:v1.4.0-beta.8
   net: host
